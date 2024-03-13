@@ -2,27 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>QR Codes Links</title>
+<title>Clickable QR Codes on Image</title>
 <style>
-  .qr-button {
-    display: inline-block;
-    padding: 10px; /* or any other styling you want */
-    margin: 5px;
-    background: #f2f2f2; /* Button color */
-    border: 1px solid #ccc; /* Button border */
-    cursor: pointer;
+  .clickable-area {
+    position: absolute;
+    display: block;
   }
-  .qr-container {
-    text-align: center; /* Centers the buttons */
+
+  /* Add more clickable areas as needed, adjust the 'top', 'left', 'width', and 'height' */
+  #link1 { top: 20%; left: 20%; width: 15%; height: 25%; }
+  #link2 { top: 20%; left: 40%; width: 15%; height: 25%; }
+  /* ...continue for other links... */
+
+  .image-wrapper {
+    position: relative;
+    width: /* width of the image */;
+    height: auto; /* maintains aspect ratio */
   }
 </style>
 </head>
 <body>
 
-<div class="qr-container">
-  <a class="qr-button" href="https://open.kakao.com/o/gaOpvWbg" target="_blank">동아 1단지</a>
-  <a class="qr-button" href="https://open.kakao.com/o/g4jTXSbg" target="_blank">동아 2단지</a>
-  <!-- Add more buttons for each QR code link -->
+<div class="image-wrapper">
+  <img src="QR_Promo_half_20240310.jpg" alt="Promo Image" style="width: 100%; height: auto;">
+  <a id="link1" class="clickable-area" href="https://open.kakao.com/o/gaOpvWbg" target="_blank">동아 1단지 (비번 1001)</a>
+  <a id="link2" class="clickable-area" href="https://open.kakao.com/o/g4jTXSbg" target="_blank">동아 2단지</a>
+  <a id="link3" class="clickable-area" href="https://open.kakao.com/o/glUMDu7d" target="_blank">우성 4단지</a>
+  <a id="link4" class="clickable-area" href="https://open.kakao.com/o/g2oywqce" target="_blank">우성 6단지</a>
+  <a id="link5" class="clickable-area" href="https://open.kakao.com/o/g1SZQsdg" target="_blank">신화 5단지</a>
+  <a id="link6" class="clickable-area" href="https://open.kakao.com/o/gQs78ndg" target="_blank">한진 6단지 (비번 1001)</a>
+  <a id="link7" class="clickable-area" href="https://open.kakao.com/o/gIBFSv7f" target="_blank">한진 7단지</a>
+  <a id="link8" class="clickable-area" href="https://open.kakao.com/o/gQsrHMbg" target="_blank">한진 8단지</a>  
+  <!-- ...more links as needed... -->
 </div>
 
 </body>
